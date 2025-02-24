@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdventureTime</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <ul>
+                <li>
+                    <strong style="color: white;">Adventure Time</strong> 
+                    <img src="http://image.tmdb.org/t/p/w342/qk3eQ8jW4opJ48gFWYUXWaMT4l.jpg" alt="AdventureTime Logo" class="sidebar-image">
+                    <div class="show-details">
+                        <p>
+                            <span style="color: #ccc;">Unlikely heroes Finn and Jake are buddies who traverse the mystical Land of Ooo. The best of friends, our heroes always find themselves in the middle of escapades. Finn and Jake depend on each other through thick and thin.</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <div class="header">
+                <h2>AdventureTime Personal Media Player</h2>
+                <p>Adventure Time!</p>
+            </div>
+            <div class="video-list">
+                <div class="video-item" onclick="openModal(0)">
+                    <img src="https://image.tmdb.org/t/p/w300/itN8wutfHFrkfsix2I9hus2SSSQ.jpg" alt="Video Thumbnail">
+                    <p>1</p>
+                </div>
+                <div class="video-item" onclick="openModal(1)">
+                    <img src="https://image.tmdb.org/t/p/w300/8EUo7I1S2zJ9j81aQlnI96O9OtW.jpg" alt="Video Thumbnail">
+                    <p>2</p>
+                </div>
+                <div class="video-item" onclick="openModal(2)">
+                    <img src="https://image.tmdb.org/t/p/w300/mxt4pdJ57dMJchwp0bKg4mKRyxN.jpg" alt="Video Thumbnail">
+                    <p>3</p>
+                </div>
+                <div class="video-item" onclick="openModal(3)">
+                    <img src="https://image.tmdb.org/t/p/w300/wvThuz7e2WQ9Hl9sL0ZpTm2jesW.jpg" alt="Video Thumbnail">
+                    <p>4</p>
+                </div>
+                <div class="video-item" onclick="openModal(4)">
+                    <img src="https://image.tmdb.org/t/p/w300/zoVLtXdeiRFTWAOHlW6iJ23YKyU.jpg" alt="Video Thumbnail">
+                    <p>5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Window -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="video-header">
+                <h2 id="videoTitle">Video Title</h2>
+                <p id="videoAdmin">Admin</p>
+            </div>
+            <div class="video-body">
+                <iframe id="videoPlayer" allowfullscreen></iframe>
+            </div>
+            <div class="video-footer">
+                <p>Adventure Time >;3</p>
+                <div class="navigation-buttons">
+                    <button class="nav-button" id="backButton" onclick="previousVideo()">Back: <span id="backVideoTitle"></span></button>
+                    <button class="nav-button" id="nextButton" onclick="nextVideo()">Next: <span id="nextVideoTitle"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
